@@ -43,6 +43,59 @@
     <!-- /Hero -->
 
     <!-- Booking -->
+    <section class="booking" style="display: none;">
+      <div class="container">
+        <!-- Booking TabLinks -->
+        <div class="booking__tab">
+          <button class="booking__tab-tablinks">Stays</button>
+          <button class="booking__tab-tablinks">Flight</button>
+          <button class="booking__tab-tablinks">Cars</button>
+          <button class="booking__tab-tablinks">Packages</button>
+          <button class="booking__tab-tablinks">Things to do</button>
+        </div>
+        <!-- Booking TabContent -->
+        <div class="booking__tabcontent">
+          <form action="#">
+            <fieldset>
+              <label>
+                <input type="radio" name="choose" value="one-way">
+                One-way
+              </label>
+              <label>
+                <input type="radio" name="choose" value="return" checked>
+                Return
+              </label>
+              <label>
+                <input type="radio" name="choose" value="multi-city">
+                Multi-city
+              </label>
+            </fieldset>
+            <fieldset>
+              <select name="people" id="people">
+                <option value="1 traveller">1 traveller</option>
+                <option value="2 traveller" selected>2 traveller</option>
+                <option value="3 traveller">3 traveller</option>
+              </select>
+              <select name="class" id="class">
+                <option value="economy" selected>Economy</option>
+                <option value="standard">Standard</option>
+                <option value="comfort">Comfort</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <input type="text" placeholder="from">
+              <button><img src="images/booking/arrows.svg" alt="Change"></button>
+              <input type="text" placeholder="to">
+            </fieldset>
+            <fieldset>
+              <input type="date" name="departing" id="departing">
+              <input type="date" name="returning" id="returning">
+            </fieldset>
+            <button type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
     <!-- /Booking -->
 
     <!-- Popular -->
