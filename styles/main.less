@@ -1,0 +1,264 @@
+// Variables
+// Fonts
+@font-main: 'Montserrat', sans-serif;
+@font-second: 'Poppins', sans-serif;
+
+// Colors
+@c-blue: #1f4aa8;
+@c-gray: #888aa2;
+@c-black: #000000;
+
+// Styles
+/* Container */
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: @font-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #ffffff;
+  background-color: #222831;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+  object-fit: contain;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.accent {
+  background-color: @c-blue;
+  border-radius: 39px;
+}
+
+/* Header */
+.header {
+  position: absolute;
+  top: 40px;
+  z-index: 10;
+  min-width: 100%;
+  font-weight: 700;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 35px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  &__menu-link {
+    font-weight: 400;
+
+    &_action {
+      font-weight: 700;
+    }
+  }
+
+  &__enter {
+    padding: 16px 50px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding-top: 208px;
+  padding-bottom: 160px;
+  background-image: url("../images/hero/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 782px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 72px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.055em;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(180deg, rgba(34, 40, 49, 0) 0%, #222831 100%);
+  }
+}
+
+/* Popular */
+.popular {
+  padding-top: 312px;
+  padding-bottom: 100px;
+  font-family: @font-second;
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 284px);
+    grid-template-rows: repeat(2, 273px);
+    grid-template-areas:
+      "item-1 item-1 item-4 item-5"
+      "item-2 item-3 item-4 item-5";
+    gap: 34px;
+  }
+
+  &__content-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  &__content-item-1 {
+    grid-area: item-1;
+    background-image: url("../images/popular/image-1.jpg");
+  }
+
+  &__content-item-2 {
+    grid-area: item-2;
+    background-image: url("../images/popular/image-2.jpg");
+  }
+
+  &__content-item-3 {
+    grid-area: item-3;
+    background-image: url("../images/popular/image-3.jpg");
+  }
+
+  &__content-item-4 {
+    grid-area: item-4;
+    background-image: url("../images/popular/image-4.jpg");
+  }
+
+  &__content-item-5 {
+    grid-area: item-5;
+    background-image: url("../images/popular/image-5.jpg");
+  }
+
+  &__content-title {
+    font-weight: 500;
+    font-size: 22px;
+  }
+}
+
+/* Download */
+.download {
+  padding-bottom: 100px;
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* Footer */
+.footer {
+  padding-top: 42px;
+  padding-bottom: 132px;
+  background-color: #133b5c;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    max-width: 232px;
+    font-size: 13px;
+  }
+
+  &__group {
+    display: flex;
+    gap: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__list>*:not(:last-child),
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__list-link {
+    font-size: 14px;
+  }
+
+  &__contacts {
+    max-width: 200px;
+    font-size: 14px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

@@ -19,31 +19,33 @@
   <header class="header">
     <div class="container">
       <nav class="header__nav">
-        <a class="header__logo logo" href="#"><img class="logo__image" src="images/common/logo.svg" alt="Expedia logo"></a>
-        <ul class="header__menu">
-          <li class="header__menu-item"><a class="header__menu-link link link_action" href="#">Home</a></li>
+        <a class="header__logo logo link" href="#"><img class="logo__image" src="images/common/logo.svg" alt="Expedia logo"></a>
+        <ul class="header__menu list">
+          <li class="header__menu-item"><a class="header__menu-link header__menu-link_action link" href="#">Home</a></li>
           <li class="header__menu-item"><a class="header__menu-link link" href="#">Trips</a></li>
           <li class="header__menu-item"><a class="header__menu-link link" href="#">About</a></li>
           <li class="header__menu-item"><a class="header__menu-link link" href="#">Support</a></li>
           <li class="header__menu-item"><a class="header__menu-link link" href="#">Travel</a></li>
         </ul>
-        <a class="header__enter" href="#">Sign Up</a>
+        <a class="header__enter link accent" href="#">Sign Up</a>
       </nav>
     </div>
   </header>
   <!-- /Header -->
 
-  <main>
+  <main class="main">
+
     <!-- Hero -->
     <section class="hero">
       <div class="container">
         <div class="hero__content">
           <h1 class="hero__title title">It Matters Who You Travel With</h1>
-          <p class="hero__text text">
+          <p class="hero__text">
             We want you to feel confident in the travel experience you will have with us.
           </p>
         </div>
       </div>
+      <!-- ::after -->
     </section>
     <!-- /Hero -->
 
@@ -107,29 +109,29 @@
     <section class="popular">
       <div class="container">
         <h2 class="popular__title title">Top Most Popular Destinations</h2>
-        <div class="populat__content">
+        <div class="popular__content">
           <!-- Popular Item - 1 -->
-          <div class="popular__content-item">
+          <div class="popular__content-item popular__content-item-1">
             <h3 class="popular__content-title title">Moraine Lake</h3>
             <p class="popular__content-text text">Alberta, Canada</p>
           </div>
           <!-- Popular Item - 2 -->
-          <div class="popular__content-item">
+          <div class="popular__content-item popular__content-item-2">
             <h3 class="popular__content-title title">Hokokuji Bamboo Forest</h3>
             <p class="popular__content-text text">Kamakura, Japan</p>
           </div>
           <!-- Popular Item - 3 -->
-          <div class="popular__content-item">
+          <div class="popular__content-item popular__content-item-3">
             <h3 class="popular__content-title title">Kirkjufell</h3>
             <p class="popular__content-text text">Grundarfjordur's, Iceland</p>
           </div>
           <!-- Popular Item - 4 -->
-          <div class="popular__content-item">
+          <div class="popular__content-item popular__content-item-4">
             <h3 class="popular__content-title title">Cappadocia</h3>
             <p class="popular__content-text text">Anatolia, Turkey</p>
           </div>
           <!-- Popular Item - 5 -->
-          <div class="popular__content-item">
+          <div class="popular__content-item popular__content-item-5">
             <h3 class="popular__content-title title">Ubud</h3>
             <p class="popular__content-text text">Bali, Indonesia</p>
           </div>
@@ -141,29 +143,30 @@
     <!-- Download -->
     <section class="download">
       <div class="container">
-        <h2 class="download__title title"></h2>
+        <h2 class="download__title title">Download Expedia App !</h2>
         <div class="download__box">
-          <a class="download__link" href="#"><img class="download__image" src="images/download/gp.png" alt="Download from Google Play"></a>
-          <a class="download__link" href="#"><img class="download__image" src="images/download/ap.png" alt="Download from App Store"></a>
+          <a class="download__link link" href="#"><img class="download__image" src="images/download/gp.png" alt="Download from Google Play"></a>
+          <a class="download__link link" href="#"><img class="download__image" src="images/download/ap.png" alt="Download from App Store"></a>
         </div>
       </div>
     </section>
     <!-- /Download -->
+
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__content">
-        <div class="footer__copyright">
-          <a class="footer__logo logo" href="#"><img class="logo__image" src="images/common/logo.svg" alt="Expedia logo"></a>
+        <div class="footer__copyright footer__flex">
+          <a class="footer__logo logo link" href="#"><img class="logo__image" src="images/common/logo.svg" alt="Expedia logo"></a>
           <p class="footer__text text">© 2021 Expedia, Inc., an Expedia Group company. All rights reserved.</p>
         </div>
         <div class="footer__group">
           <!-- Footer Grout Item - 1 -->
           <div class="footer__group-item">
-            <h3 class="footer__title title">Company</h3>
-            <ul class="footer__list">
+            <h3 class="footer__title">Company</h3>
+            <ul class="footer__list list">
               <li class="footer__list-item"><a class="footer__list-link link" href="#">About us</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">Jobs</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">List your property</a></li>
@@ -173,8 +176,8 @@
           </div>
           <!-- Footer Grout Item - 2 -->
           <div class="footer__group-item">
-            <h3 class="footer__title title">Explore</h3>
-            <ul class="footer__list">
+            <h3 class="footer__title">Explore</h3>
+            <ul class="footer__list list">
               <li class="footer__list-item"><a class="footer__list-link link" href="#">About us</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">Jobs</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">List your property</a></li>
@@ -184,8 +187,8 @@
           </div>
           <!-- Footer Grout Item - 3 -->
           <div class="footer__group-item">
-            <h3 class="footer__title title">Term and Policies</h3>
-            <ul class="footer__list">
+            <h3 class="footer__title">Term and Policies</h3>
+            <ul class="footer__list list">
               <li class="footer__list-item"><a class="footer__list-link link" href="#">About us</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">Jobs</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">List your property</a></li>
@@ -195,8 +198,8 @@
           </div>
           <!-- Footer Grout Item - 4 -->
           <div class="footer__group-item">
-            <h3 class="footer__title title">Help</h3>
-            <ul class="footer__list">
+            <h3 class="footer__title">Help</h3>
+            <ul class="footer__list list">
               <li class="footer__list-item"><a class="footer__list-link link" href="#">About us</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">Jobs</a></li>
               <li class="footer__list-item"><a class="footer__list-link link" href="#">List your property</a></li>
@@ -205,19 +208,22 @@
             </ul>
           </div>
         </div>
-        <div class="footer__contacts">
-          <h3 class="footer__title title"></h3>
-          <p class="footer__text text">Question or feedback? We`d love to hear from you</p>
-          <ul class="footer__social">
-            <li class="footer__social-item"><a class="footer__social-link" href="#"><img src="images/footer/ig.svg" alt="Link to Instagram"></a></li>
-            <li class="footer__social-item"><a class="footer__social-link" href="#"><img src="images/footer/tw.svg" alt="Link to Twitter"></a></li>
-            <li class="footer__social-item"><a class="footer__social-link" href="#"><img src="images/footer/in.svg" alt="Link to LinkedIn"></a></li>
+        <div class="footer__contacts footer__flex">
+          <div class="footer__box">
+            <h3 class="footer__title">Get in touch</h3>
+            <p class="footer__text text">Question or feedback? We`d love to hear from you</p>
+          </div>
+          <ul class="footer__social list">
+            <li class="footer__social-item"><a class="footer__social-link link" href="#"><img src="images/footer/ig.svg" alt="Link to Instagram"></a></li>
+            <li class="footer__social-item"><a class="footer__social-link link" href="#"><img src="images/footer/tw.svg" alt="Link to Twitter"></a></li>
+            <li class="footer__social-item"><a class="footer__social-link link" href="#"><img src="images/footer/in.svg" alt="Link to LinkedIn"></a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
   <!-- /Footer -->
+
 </body>
 
 </html>
