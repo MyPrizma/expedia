@@ -133,6 +133,7 @@ select {
 /* Booking */
 .booking {
   position: absolute;
+  top: 534px;
   min-width: 100%;
   /* Booking TabLinks */
   /* Booking TabContent */
@@ -148,7 +149,10 @@ select {
   display: flex;
   gap: 50px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #888aa2;
+  border-bottom: 1px solid;
+  -o-border-image: linear-gradient(to right, #888aa2, transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#888aa2), to(transparent)) 1;
+     border-image: linear-gradient(to right, #888aa2, transparent) 1;
 }
 .booking__tab-tablinks {
   padding-bottom: 10px;
