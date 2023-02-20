@@ -47,9 +47,7 @@ fieldset {
   padding: 0;
   border: none;
 }
-input {
-  border: none;
-}
+input,
 select {
   border: none;
 }
@@ -134,6 +132,7 @@ select {
 .booking {
   position: absolute;
   top: 534px;
+  z-index: 10;
   min-width: 100%;
   /* Booking TabLinks */
   /* Booking TabContent */
@@ -149,22 +148,50 @@ select {
   display: flex;
   gap: 50px;
   margin-bottom: 30px;
+  padding-bottom: 9px;
+  font-weight: 600;
+  color: #888aa2;
   border-bottom: 1px solid;
   -o-border-image: linear-gradient(to right, #888aa2, transparent) 1;
      border-image: -webkit-gradient(linear, left top, right top, from(#888aa2), to(transparent)) 1;
      border-image: linear-gradient(to right, #888aa2, transparent) 1;
 }
-.booking__tab-tablinks {
-  padding-bottom: 10px;
-  font-weight: 600;
-  color: #888aa2;
+.booking__tab-input[type=radio] {
+  display: none;
 }
-.booking__tab-tablinks_action {
+.booking__tab-label {
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+#tab1:checked ~ .booking__tab .booking__tab-item1 .booking__tab-label,
+#tab2:checked ~ .booking__tab .booking__tab-item2 .booking__tab-label,
+#tab3:checked ~ .booking__tab .booking__tab-item3 .booking__tab-label,
+#tab4:checked ~ .booking__tab .booking__tab-item4 .booking__tab-label,
+#tab5:checked ~ .booking__tab .booking__tab-item5 .booking__tab-label {
+  border-color: #1f4aa8;
   color: #1f4aa8;
-  border-bottom: 2px solid #1f4aa8;
+}
+.booking__tab-label:hover {
+  border-color: #000000;
 }
 .booking__tabcontent {
+  display: none;
+}
+#tab1:checked ~ .booking__tabcontents .booking__tabcontent1,
+#tab2:checked ~ .booking__tabcontents .booking__tabcontent2,
+#tab3:checked ~ .booking__tabcontents .booking__tabcontent3,
+#tab4:checked ~ .booking__tabcontents .booking__tabcontent4,
+#tab5:checked ~ .booking__tabcontents .booking__tabcontent5 {
+  display: block;
+}
+.booking__tabcontents {
   color: #000000;
+}
+.booking__title {
+  text-align: center;
 }
 .booking__top {
   display: -webkit-box;
@@ -187,8 +214,23 @@ select {
           align-items: center;
   gap: 30px;
 }
-.booking__radiogroup-radio {
-  margin-right: 15px;
+.booking__radiogroup-input[type=radio] {
+  display: none;
+}
+.booking__radiogroup-label {
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.booking__radiogroup-input[type=radio]:checked + .booking__radiogroup-label {
+  color: #1f4aa8;
+  background-color: #becdf8;
+}
+.booking__radiogroup-label:hover {
+  color: #3662d8;
+  background-color: #e7edfd;
 }
 .booking__selectgroup {
   display: -webkit-box;

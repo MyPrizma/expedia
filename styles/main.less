@@ -65,10 +65,7 @@ fieldset {
   border: none;
 }
 
-input {
-  border: none;
-}
-
+input,
 select {
   border: none;
 }
@@ -157,6 +154,7 @@ select {
 .booking {
   position: absolute;
   top: 534px;
+  z-index: 10;
   min-width: 100%;
 
   &__inner {
@@ -170,24 +168,58 @@ select {
     display: flex;
     gap: 50px;
     margin-bottom: 30px;
+    padding-bottom: 9px;
+    font-weight: 600;
+    color: @c-gray;
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, @c-gray, transparent) 1;
   }
 
-  &__tab-tablinks {
-    padding-bottom: 10px;
-    font-weight: 600;
-    color: @c-gray;
+  &__tab-input[type=radio] {
+    display: none;
+  }
 
-    &_action {
+  &__tab-label {
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+
+  #tab1:checked~&__tab &__tab-item1,
+  #tab2:checked~&__tab &__tab-item2,
+  #tab3:checked~&__tab &__tab-item3,
+  #tab4:checked~&__tab &__tab-item4,
+  #tab5:checked~&__tab &__tab-item5 {
+    .booking__tab-label {
+      border-color: @c-blue;
       color: @c-blue;
-      border-bottom: 2px solid @c-blue;
     }
   }
 
-  /* Booking TabContent */
+  &__tab-label:hover {
+    border-color: @c-black;
+  }
+
   &__tabcontent {
+    display: none;
+  }
+
+  #tab1:checked~&__tabcontents &__tabcontent1,
+  #tab2:checked~&__tabcontents &__tabcontent2,
+  #tab3:checked~&__tabcontents &__tabcontent3,
+  #tab4:checked~&__tabcontents &__tabcontent4,
+  #tab5:checked~&__tabcontents &__tabcontent5 {
+    display: block;
+  }
+
+  /* Booking TabContent */
+  &__tabcontents {
     color: @c-black;
+  }
+
+  &__title {
+    text-align: center;
   }
 
   &__top {
@@ -203,8 +235,25 @@ select {
     gap: 30px;
   }
 
-  &__radiogroup-radio {
-    margin-right: 15px;
+  &__radiogroup-input[type=radio] {
+    display: none;
+  }
+
+  &__radiogroup-label {
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &__radiogroup-input[type=radio]:checked+&__radiogroup-label {
+    color: @c-blue;
+    background-color: #becdf8;
+  }
+
+  &__radiogroup-label:hover {
+    color: #3662d8;
+    background-color: #e7edfd;
   }
 
   &__selectgroup {

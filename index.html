@@ -54,71 +54,90 @@
       <div class="container">
         <div class="booking__inner">
           <!-- Booking TabLinks -->
-          <div class="booking__tab">
-            <button class="booking__tab-tablinks">Stays</button>
-            <button class="booking__tab-tablinks booking__tab-tablinks_action">Flight</button>
-            <button class="booking__tab-tablinks">Cars</button>
-            <button class="booking__tab-tablinks">Packages</button>
-            <button class="booking__tab-tablinks">Things to do</button>
-          </div>
+          <input class="booking__tab-input" id="tab1" type="radio" name="tab" value="stays">
+          <input class="booking__tab-input" id="tab2" type="radio" name="tab" value="flight" checked>
+          <input class="booking__tab-input" id="tab3" type="radio" name="tab" value="cars">
+          <input class="booking__tab-input" id="tab4" type="radio" name="tab" value="packages">
+          <input class="booking__tab-input" id="tab5" type="radio" name="tab" value="things-to-do">
+          <ul class="booking__tab list">
+            <li class="booking__tab-item booking__tab-item1"><label class="booking__tab-label" for="tab1">Stays</label></li>
+            <li class="booking__tab-item booking__tab-item2"><label class="booking__tab-label" for="tab2">Flight</label></li>
+            <li class="booking__tab-item booking__tab-item3"><label class="booking__tab-label" for="tab3">Cars</label></li>
+            <li class="booking__tab-item booking__tab-item4"><label class="booking__tab-label" for="tab4">Packages</label></li>
+            <li class="booking__tab-item booking__tab-item5"><label class="booking__tab-label" for="tab5">Things to do</label></li>
+          </ul>
           <!-- Booking TabContent -->
-          <div class="booking__tabcontent">
-            <form action="#">
-              <div class="booking__top">
-                <fieldset class="booking__radiogroup">
-                  <label class="booking__radiogroup-label">
-                    <input class="booking__radiogroup-radio" type="radio" name="choose" value="one-way">
-                    <span class="booking__radiogroup-text">One-way</span>
-                  </label>
-                  <label class="booking__radiogroup-label">
-                    <input class="booking__radiogroup-radio" type="radio" name="choose" value="return" checked>
-                    <span class="booking__radiogroup-text">Return</span>
-                  </label>
-                  <label class="booking__radiogroup-label">
-                    <input class="booking__radiogroup-radio" type="radio" name="choose" value="multi-city">
-                    <span class="booking__radiogroup-text">Multi-city</span>
-                  </label>
-                </fieldset>
-                <fieldset class="booking__selectgroup">
-                  <select class="booking__selectgroup-select" name="people" id="people">
-                    <option value="1 traveller">1 traveller</option>
-                    <option value="2 traveller" selected>2 traveller</option>
-                    <option value="3 traveller">3 traveller</option>
-                  </select>
-                  <select class="booking__selectgroup-select" name="class" id="class">
-                    <option value="economy" selected>Economy</option>
-                    <option value="standard">Standard</option>
-                    <option value="comfort">Comfort</option>
-                  </select>
-                </fieldset>
-              </div>
-              <div class="booking__bottom">
-                <fieldset class="booking__textgroup">
-                  <label class="booking__textgroup-label">
-                    <!-- ::before -->
-                    <input class="booking__textgroup-input" type="text" placeholder="from">
-                  </label>
-                  <button class="booking__textgroup-button" type="button"><img class="booking__textgroup-img" src="images/booking/arrows.svg" alt="Change"></button>
-                  <label class="booking__textgroup-label">
-                    <!-- ::before -->
-                    <input class="booking__textgroup-input" type="text" placeholder="to">
-                  </label>
-                </fieldset>
-                <fieldset class="booking__dategroup">
-                  <label class="booking__dategroup-label" for="departing">
-                    <span class="booking__dategroup-text">Depatring</span>
-                    <input class="booking__datelgroup-input" type="date" name="departing" id="departing">
-                  </label>
-                  <label class="booking__dategroup-label" for="returning">
-                    <span class="booking__dategroup-text">Returning</span>
-                    <input class="booking__datelgroup-input" type="date" name="returning" id="returning">
-                  </label>
-                </fieldset>
-              </div>
-              <div class="booking__box">
-                <button class="booking__button accent" type="button">Search</button>
-              </div>
-            </form>
+          <div class="booking__tabcontents">
+            <div class="booking__tabcontent booking__tabcontent1">
+              <h2 class="booking__title">В разработке</h2>
+            </div>
+            <div class="booking__tabcontent booking__tabcontent2">
+              <form action="#">
+                <div class="booking__top">
+                  <fieldset class="booking__radiogroup">
+                    <div class="booking__radiogroup-btn">
+                      <input class="booking__radiogroup-input" id="one-way" type="radio" name="choose" value="one-way">
+                      <label class="booking__radiogroup-label" for="one-way">One-way</label>
+                    </div>
+                    <div class="booking__radiogroup-btn">
+                      <input class="booking__radiogroup-input" id="return" type="radio" name="choose" value="return" checked>
+                      <label class="booking__radiogroup-label" for="return">Return</label>
+                    </div>
+                    <div class="booking__radiogroup-btn">
+                      <input class="booking__radiogroup-input" id="multi-city" type="radio" name="choose" value="multi-city">
+                      <label class="booking__radiogroup-label" for="multi-city">Multi-city</label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="booking__selectgroup">
+                    <select class="booking__selectgroup-select" name="people" id="people">
+                      <option value="1 traveller">1 traveller</option>
+                      <option value="2 traveller" selected>2 traveller</option>
+                      <option value="3 traveller">3 traveller</option>
+                    </select>
+                    <select class="booking__selectgroup-select" name="class" id="class">
+                      <option value="economy" selected>Economy</option>
+                      <option value="standard">Standard</option>
+                      <option value="comfort">Comfort</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="booking__bottom">
+                  <fieldset class="booking__textgroup">
+                    <label class="booking__textgroup-label">
+                      <!-- ::before -->
+                      <input class="booking__textgroup-input" type="text" placeholder="from">
+                    </label>
+                    <button class="booking__textgroup-button" type="button"><img class="booking__textgroup-img" src="images/booking/arrows.svg" alt="Change"></button>
+                    <label class="booking__textgroup-label">
+                      <!-- ::before -->
+                      <input class="booking__textgroup-input" type="text" placeholder="to">
+                    </label>
+                  </fieldset>
+                  <fieldset class="booking__dategroup">
+                    <label class="booking__dategroup-label" for="departing">
+                      <span class="booking__dategroup-text">Depatring</span>
+                      <input class="booking__datelgroup-input" type="date" name="departing" id="departing">
+                    </label>
+                    <label class="booking__dategroup-label" for="returning">
+                      <span class="booking__dategroup-text">Returning</span>
+                      <input class="booking__datelgroup-input" type="date" name="returning" id="returning">
+                    </label>
+                  </fieldset>
+                </div>
+                <div class="booking__box">
+                  <button class="booking__button accent" type="button">Search</button>
+                </div>
+              </form>
+            </div>
+            <div class="booking__tabcontent booking__tabcontent3">
+              <h2 class="booking__title">В разработке</h2>
+            </div>
+            <div class="booking__tabcontent booking__tabcontent4">
+              <h2 class="booking__title">В разработке</h2>
+            </div>
+            <div class="booking__tabcontent booking__tabcontent5">
+              <h2 class="booking__title">В разработке</h2>
+            </div>
           </div>
         </div>
       </div>
