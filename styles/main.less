@@ -110,6 +110,90 @@ select {
     font-weight: 700;
     font-size: 14px;
   }
+
+  /* Header Mobile Menu */
+  &__btn {
+    position: relative;
+    z-index: 12;
+    display: none;
+    width: 30px;
+    height: 26px;
+    overflow: hidden;
+  }
+
+  &__btn-line {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  &__btn_active {
+    .header__btn-line {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &:first-child {
+        top: 50%;
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:last-child {
+        top: 50%;
+        transform: translate(-50%, 0) rotate(-45deg);
+      }
+    }
+  }
+
+  &__mobnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: none;
+    padding: 30px;
+    width: 220px;
+    background-color: rgba(217, 217, 217, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 30px 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+
+    &_active {
+      transform: translateX(0);
+    }
+  }
+
+  &__mobmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__mobenter {
+    padding: 16px 50px;
+    font-weight: 700;
+    font-size: 14px;
+  }
 }
 
 /* Hero */
@@ -156,7 +240,7 @@ select {
   position: absolute;
   top: 534px;
   z-index: 10;
-  min-width: 100%;
+  width: 100%;
 
   &__inner {
     padding: 20px 44px;
@@ -270,7 +354,9 @@ select {
   &__bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 18px;
   }
 
@@ -285,7 +371,7 @@ select {
     display: flex;
     align-items: center;
     padding: 0 64px;
-    width: 364px;
+    max-width: 364px;
     height: 48px;
     border: 0.5px solid @c-black;
     border-radius: 10px;
@@ -364,7 +450,7 @@ select {
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 284px);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 273px);
     grid-template-areas:
       "item-1 item-1 item-4 item-5"
@@ -478,5 +564,142 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+/* Media */
+
+@media (max-width: 1024px) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+
+    &__menu,
+    &__enter {
+      display: none;
+    }
+
+    &__btn,
+    &__mobnav {
+      display: block;
+    }
+  }
+
+  .popular {
+    &__content {
+      grid-template-columns: auto;
+      grid-template-rows: 273px 237px 580px;
+      grid-template-areas:
+        "item-1 item-1"
+        "item-2 item-3"
+        "item-4 item-5"
+        "item-4 item-5";
+    }
+
+    &__content-item {
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .booking {
+    &__top {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    &__textgroup-label {
+      width: 298px;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .booking {
+    &__tab {
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    &__textgroup-label {
+      width: 208px;
+    }
+  }
+
+  .popular {
+    &__content-item {
+      padding: 20px;
+    }
+  }
+
+  .footer {
+    &__flex {
+      gap: 30px;
+    }
+
+    &__group {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    &__title {
+      font-size: 58px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  .booking {
+    &__tab {
+      gap: 15px;
+    }
+
+    &__tab-label {
+      font-size: 12px;
+    }
+
+    &__radiogroup {
+      gap: 0;
+    }
+
+    &__textgroup-label {
+      width: 168px;
+    }
+  }
+
+  .popular {
+    &__content-item {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
   }
 }
