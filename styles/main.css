@@ -49,6 +49,7 @@ fieldset {
 }
 input,
 select {
+  background-color: transparent;
   border: none;
 }
 .accent {
