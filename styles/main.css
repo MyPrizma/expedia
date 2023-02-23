@@ -632,6 +632,7 @@ select {
     gap: 0;
   }
   .booking__textgroup-label {
+    padding-right: 24px;
     width: 168px;
   }
   .popular__content-item {
